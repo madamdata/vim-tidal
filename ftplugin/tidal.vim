@@ -100,16 +100,16 @@ if !exists("g:tidal_no_mappings") || !g:tidal_no_mappings
   endif
 
   if !hasmapto('<Plug>TidalLineSend', 'n')
-    nmap <buffer> <localleader>s  <Plug>TidalLineSend
+    nmap <buffer> <localleader>r  <Plug>TidalLineSend
   endif
 
   if !hasmapto('<Plug>TidalParagraphSend', 'n')
-    nmap <buffer> <localleader>ss <Plug>TidalParagraphSend
+    nmap <buffer> <localleader>p <Plug>TidalParagraphSend
     nmap <buffer> <c-e> <Plug>TidalParagraphSend
   endif
 
-  nnoremap <buffer> <localleader>h :TidalHush<cr>
-  nnoremap <buffer> <c-h> :TidalHush<cr>
+  nnoremap <buffer> <localleader>k :TidalHush<cr>
+  "nnoremap <buffer> <c-k> :TidalHush<cr>
   let i = 1
   while i <= 9
     execute 'nnoremap <buffer> <localleader>'.i.'  :TidalSilence '.i.'<cr>'
